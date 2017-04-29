@@ -1,0 +1,85 @@
+@import 'bootstrap';
+@import 'font-awesome';
+
+.header-box {
+  background-color: #0F6177;
+  padding: 20px 0;
+}
+
+.header {
+  color: #FFF;
+}
+
+nav {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &>li {
+      display: inline;
+      margin: 0 8px;
+    }
+  }
+}
+
+section {
+  padding: 40px 0;
+
+  h1, h2, h4 {
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2.25em;
+    color: #1BA39C;
+  }
+
+  h4 {
+    font-size: 1.5em;
+  }
+}
+
+.hero {
+  background-color: #0B8389;
+  color: #FFF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+
+  p {
+    margin-top: 0.5em;
+    font-size: 2em;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+.expert-area {
+  padding: 40px 0 0;
+  text-align: center;
+
+  & > .fa {
+    font-size: 4em;
+    margin-bottom: 20px;
+  }
+}
+
+.alt-section {
+  background-color: #1BBC9B;
+  color: #FFF;
+
+  h2 {
+    color: #FFF;
+  }
+}

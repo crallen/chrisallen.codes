@@ -1,0 +1,20 @@
+{
+  "name": "chrisallen-codes-site",
+  "version": "1.0.0",
+  "description": "Personal site and blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Chris Allen",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.5.2",
+    "webpack": "^2.4.1",
+    "webpack-merge": "^4.1.0"
+  }
+}
