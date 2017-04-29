@@ -5,7 +5,8 @@ var webpackMerge = require('webpack-merge');
 var config = {
   devtool: 'source-map',
   entry: {
-    vendor: './assets/js/vendor.js'
+    vendor: './assets/js/vendor.js',
+    fonts: './assets/js/fonts.js'
   },
   output: {
     path: path.resolve('./static/js'),
@@ -21,6 +22,9 @@ var config = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['fonts', 'vendor'].reverse()
     })
   ]
 };

@@ -1,6 +1,23 @@
 @import 'bootstrap';
 @import 'font-awesome';
 
+body {
+  text-rendering: optimizeLegibility;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.wf-loading {
+  h1, h2, h4, p, i, li {
+    opacity: 0;
+  }
+}
+
+h1, h2, h4, p, i, li {
+  transition-property: 'opacity';
+  transition-duration: 100ms;
+  transition-timing-function: ease-in;
+}
+
 .header-box {
   background-color: #0F6177;
   padding: 20px 0;
