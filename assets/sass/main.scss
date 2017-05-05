@@ -1,36 +1,44 @@
 @import 'bootstrap';
 @import 'font-awesome';
 
+@import './variables';
+
 body {
   text-rendering: optimizeLegibility;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
 }
 
 .wf-loading {
-  h1, h2, h4, p, i, li {
+  h1, h2, h4, p, i, li, span {
     opacity: 0;
   }
 }
 
-h1, h2, h4, p, i, li {
+h1, h2, h4, p, i, li, span {
   transition-property: 'opacity';
-  transition-duration: 100ms;
+  transition-duration: 150ms;
   transition-timing-function: ease-in;
 }
 
 .header-box {
-  background-color: #0F6177;
-  padding: 20px 0;
+  background-color: $medTurquoise;
+  padding: 40px 0 20px;
+
+  background: -webkit-linear-gradient(top, $darkTurquoise, $medTurquoise);
 }
 
 .header {
   color: #FFF;
+  line-height: 1.1em;
+}
+
+.brand {
+  font-size: 1.1em;
 }
 
 nav {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 300;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 
   ul {
@@ -40,7 +48,7 @@ nav {
 
     &>li {
       display: inline;
-      margin: 0 8px;
+      margin-left: 16px;
     }
   }
 }
@@ -55,40 +63,48 @@ section {
   }
 
   h1 {
-    font-size: 4em;
+    font-size: 3.5em;
   }
 
   h2 {
-    font-size: 2.25em;
-    color: #1BA39C;
+    font-size: 1.75em;
+    color: #000;
+    text-transform: uppercase;
   }
 
   h4 {
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
 }
 
 .hero {
-  background-color: #0B8389;
+  background-color: $medTurquoise;
   color: #FFF;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  padding-bottom: 200px;
 
   p {
     margin-top: 0.5em;
-    font-size: 2em;
+    font-size: 1.75em;
     font-weight: 300;
     text-align: center;
   }
 }
 
+#expertise {
+  margin-top: -160px;
+}
+
 .expert-area {
-  padding: 40px 0 0;
+  padding: 40px 0;
   text-align: center;
+  background-color: #FFF;
+  box-shadow: 5px 15px 42px 3px rgba(15, 97, 119, 0.1);
 
   & > .fa {
     font-size: 4em;
     margin-bottom: 20px;
+    color: $darkGreen;
   }
 }
 
