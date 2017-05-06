@@ -21,35 +21,15 @@ h1, h2, h4, p, i, li, span {
   transition-timing-function: ease-in;
 }
 
-.header-box {
-  background-color: $medTurquoise;
+header {
   padding: 40px 0 20px;
-
-  background: -webkit-linear-gradient(top, $darkTurquoise, $medTurquoise);
-}
-
-.header {
   color: #FFF;
   line-height: 1.1em;
-}
-
-.brand {
-  font-size: 1.1em;
-}
-
-nav {
-  font-weight: 300;
+  background-color: $medTurquoise;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    &>li {
-      display: inline;
-      margin-left: 16px;
-    }
+  .brand {
+    font-size: 1.1em;
   }
 }
 
@@ -77,22 +57,66 @@ section {
   }
 }
 
-.hero {
-  background-color: $medTurquoise;
-  color: #FFF;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-  padding-bottom: 200px;
+.hero-box {
+  background-image: url('/images/coffee-apple-iphone-laptop.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
 
-  p {
-    margin-top: 0.5em;
-    font-size: 1.75em;
-    font-weight: 300;
-    text-align: center;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, $darkTurquoise, $medTurquoise 20%, $medTurquoise);
+    opacity: 0.85;
+    z-index: -1;
+  }
+
+  header {
+    background-color: transparent;
+  }
+
+  section {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    padding-bottom: 200px;
+    color: #FFF;
+
+    p {
+      margin-top: 0.5em;
+      font-size: 1.75em;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+}
+
+nav {
+  font-weight: 300;
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &>li {
+      display: inline;
+      margin-left: 16px;
+    }
   }
 }
 
 #expertise {
   margin-top: -160px;
+  position: relative;
+  z-index: 1;
 }
 
 .expert-area {
