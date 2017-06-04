@@ -35,8 +35,7 @@ header {
   padding: 40px 0 20px;
   color: #FFF;
   line-height: 1.1em;
-  background-color: $lightTurquoise;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  background-color: $medTurquoise;
 
   a {
     color: #FFF;
@@ -142,6 +141,7 @@ section, article {
   header {
     background-color: transparent;
     border: 0 none;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   }
 
   section {

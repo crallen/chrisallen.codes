@@ -1,10 +1,12 @@
 +++
-title = "Online Store REST API"
-description = "Work I've done on the AmeriCommerce/Spark Online Stores REST API"
-slug = "ac-rest-api"
+title = "Portfolio"
+description = "A summary of projects I've worked on"
+slug = "portfolio"
 +++
 
-## Online Store REST API
+## Portfolio
+
+### Online Store REST API
 
 Before 2013, if merchants or third parties wanted a deeper level of integration with Spark Online Stores (previously AmeriCommerce), they had to use the platform's SOAP API. There were a number of problems with the SOAP API: it was slow, clunky, and hard to use outside of the .NET ecosystem.
 
