@@ -3,19 +3,29 @@
 
 @import './variables';
 
+html, body {
+  height: 100%;
+}
+
 body {
   text-rendering: optimizeLegibility;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .wf-loading {
-  h1, h2, h4, p, i, li, span {
+  h1, h2, h3, h4, p, i, li, span, a {
     opacity: 0;
   }
 }
 
-h1, h2, h4, p, i, li, span {
+h1, h2, h3, h4, p, i, li, span, a {
   transition-property: 'opacity';
   transition-duration: 150ms;
   transition-timing-function: ease-in;
@@ -25,19 +35,46 @@ header {
   padding: 40px 0 20px;
   color: #FFF;
   line-height: 1.1em;
-  background-color: $medTurquoise;
+  background-color: $lightTurquoise;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+
+  a {
+    color: #FFF;
+    text-decoration: none;
+
+    &:hover, &:active {
+      color: #FFF;
+    }
+  }
 
   .brand {
     font-size: 1.1em;
   }
+
+  nav {
+    font-weight: 300;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      &>li {
+        display: inline;
+        margin-left: 16px;
+      }
+    }
+  }
 }
 
-section {
+section, article {
   padding: 40px 0;
 
-  h1, h2, h4 {
+  h1, h2, h3, h4 {
     margin: 0;
+  }
+
+  h1, h3, h4 {
     text-align: center;
   }
 
@@ -48,8 +85,15 @@ section {
 
   h2 {
     font-size: 1.75em;
-    color: #000;
-    font-weight: 400;
+    color: $darkGray;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    font-size: 1.1em;
+    color: $darkGray;
   }
 
   h4 {
@@ -59,9 +103,10 @@ section {
 
   p {
     font-weight: 300;
-    font-size: 1.1em;
+    font-size: 1em;
     margin-top: 0.75em;
-    line-height: 1.5em;
+    line-height: 1.75em;
+    color: $medGray;
   }
 }
 
@@ -73,9 +118,10 @@ section {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   position: relative;
   z-index: 1;
+  min-height: 580px;
+  min-width: 100%;
 
   &:before {
     content: '';
@@ -84,7 +130,7 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(to bottom, $darkTurquoise, $medTurquoise 20%, $medTurquoise);
+    background-image: linear-gradient(to bottom, $darkTurquoise, $medTurquoise 20%, $darkGreen);
     opacity: 0.85;
     z-index: -1;
   }
@@ -95,6 +141,7 @@ section {
 
   header {
     background-color: transparent;
+    border: 0 none;
   }
 
   section {
@@ -103,33 +150,22 @@ section {
     color: #FFF;
     text-align: center;
     min-height: 500px;
-    padding-top: 80px;
+    padding: 80px 0 40px;
 
     p {
       font-size: 1.75em;
       text-align: center;
       margin-top: 0.5em;
-    }
-  }
-}
-
-nav {
-  font-weight: 300;
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    &>li {
-      display: inline;
-      margin-left: 16px;
+      color: #FFF;
+      line-height: 1.5em;
     }
   }
 }
 
 #expertise {
-  margin-top: -172px;
+  margin-top: -180px;
+  margin-bottom: 0;
+  padding-bottom: 40px;
   position: relative;
   z-index: 1;
 }
@@ -143,7 +179,7 @@ nav {
   & > .fa {
     font-size: 4em;
     margin-bottom: 20px;
-    color: $medTurquoise;
+    color: $lightTurquoise;
   }
 }
 
@@ -153,5 +189,177 @@ nav {
 
   h2 {
     color: #FFF;
+  }
+}
+
+.section-img {
+  box-shadow: 5px 15px 42px 3px rgba(15, 97, 119, 0.1);
+  padding: 0;
+  margin-top: 1.25em;
+}
+
+#work {
+  h4 {
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.75em;
+    font-size: 1em;
+    margin-top: 0.75em;
+  }
+}
+
+#contact {
+  background-color: $lightGray;
+  margin-bottom: 0;
+
+  label {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    border: 1px solid #E9E9E9;
+
+    input, textarea {
+      border: 0 none;
+      outline: none;
+      background-color: #FFF;
+      padding: 20px;
+      width: 100%;
+      transition: all 0.2s ease-in-out;
+      font-size: 18px;
+      font-weight: 300;
+      color: $medGray;
+
+      @each $pseudo in $placeholderPseudos {
+        &#{$pseudo} {
+          font-weight: 300;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+
+      &:focus, &.filled {
+        padding-top: 30px;
+        padding-bottom: 10px;
+
+        & + span {
+          opacity: 1;
+          top: 0px;
+        }
+
+        @each $pseudo in $placeholderPseudos {
+          &#{$pseudo} {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    textarea {
+      height: 200px;
+    }
+
+    span {
+      display: block;
+      color: $lightTurquoise;
+      font-weight: 300;
+      font-size: 14px;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      right: 20px;
+      background-color: #FFF;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+      padding: 10px 0 5px;
+    }
+  }
+
+  input[type=submit] {
+    width: 100%;
+    padding: 15px;
+    color: #FFF;
+    background-color: $lightGreen;
+    border: 0 none;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      background-color: $darkGreen;
+    }
+  }
+}
+
+footer {
+  .footer-content {
+    background-color: $darkerGray;
+    padding: 40px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .copyright {
+    background-color: $nearBlack;
+    padding: 20px 0;
+
+    p {
+      margin: 0;
+      line-height: 1.5em;
+      text-align: center;
+      color: $medGray;
+      font-weight: 300;
+      font-size: 0.7em;
+    }
+  }
+
+  nav {
+    &>ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      &>li {
+        display: inline-block;
+        margin: 0 0.5em;
+      }
+    }
+
+    a {
+      color: #FFF;
+      font-weight: 300;
+      font-size: 0.9em;
+
+      &:hover, &:active {
+        color: #FFF;
+      }
+    }
+  }
+
+  .social {
+    margin-bottom: 40px;
+
+    .social-icon-box {
+      margin: 0;
+      padding: 0;
+
+      a {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: $lightTurquoise;
+        color: #FFF;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        margin: 0 auto;
+
+        &:hover, &:active {
+          text-decoration: none;
+        }
+      }
+
+      i {
+        font-size: 1.5em;
+        line-height: 50px;
+      }
+    }
   }
 }

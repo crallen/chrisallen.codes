@@ -1,65 +1,113 @@
 {{ partial "headtags.html" . }}
 
-<div class="hero-box">
-  {{ partial "nav.html" . }}
-  <section>
+<main>
+  <div class="hero-box">
+    {{ partial "nav.html" . }}
+    <section>
+      <div class="container">
+        <h1>Hi, I'm Chris</h1>
+        <p class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">I've been building software for over 10 years and I love it.</p>
+      </div>
+    </section>
+  </div>
+
+  <section id="expertise">
     <div class="container">
-      <h1>Hi, I'm Chris</h1>
-      <p class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">I've been building software for over 10 years and I love it.</p>
+      <div class="col-md-10 col-md-offset-1 col-sm-12">
+        <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
+          <i class="fa fa-wrench fa-fw"></i>
+          <h4>Full Stack Development</h4>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
+          <i class="fa fa-code fa-fw"></i>
+          <h4>UI/UX Implementation</h4>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
+          <i class="fa fa-rocket fa-fw"></i>
+          <h4>Continuous Integration</h4>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
+          <i class="fa fa-cogs fa-fw"></i>
+          <h4>Web APIs</h4>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
+          <i class="fa fa-lock fa-fw"></i>
+          <h4>Secure Coding</h4>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
+          <i class="fa fa-magic fa-fw"></i>
+          <h4>Automation</h4>
+        </div>
+      </div>
     </div>
   </section>
-</div>
 
-<section id="expertise">
-  <div class="container">
-    <div class="col-md-10 col-md-offset-1 col-sm-12">
-      <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
-        <i class="fa fa-wrench fa-fw"></i>
-        <h4>Full Stack Development</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
-        <i class="fa fa-code fa-fw"></i>
-        <h4>UI/UX Implementation</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
-        <i class="fa fa-rocket fa-fw"></i>
-        <h4>Continuous Integration</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
-        <i class="fa fa-cogs fa-fw"></i>
-        <h4>Web APIs</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
-        <i class="fa fa-lock fa-fw"></i>
-        <h4>Secure Coding</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12 expert-area">
-        <i class="fa fa-magic fa-fw"></i>
-        <h4>Automation</h4>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="container">
-    <div class="col-md-8 col-md-offset-2 col-sm-12">
+  <section id="about">
+    <div class="container">
       <h2>About Me</h2>
-      <div class="col-md-10 col-md-offset-1 col-sm-12">
-        <p>
-          I am a software developer who has spent a lot of time working with web applications
-          in the e-commerce space. More recently, I've taken a dive into the world of DevOps,
-          with a focus on Amazon Web Services and tools like Docker and Chef. I work with a
-          variety of technology stacks and languages, and I'm always on the lookout for 
-          something new to learn.
-        </p>
-        <p>
-          Away from the desk, I enjoy spending time with my wife and our dogs. We love to travel
-          and really enjoy Walt Disney World and cruising.
-        </p>
+      <div class="row">
+        <div class="col-lg-4 col-md-5 visible-md visible-lg">
+          <img src="/images/pro-avatar.jpg" class="col-md-11 col-md-offset-0 section-img">
+        </div>
+        <div class="col-lg-8 col-md-7 col-xs-12">
+          <p>
+            I am a software developer who has spent a lot of time working with web applications
+            in the ecommerce space. More recently, I've taken a dive into the world of DevOps,
+            with a focus on Amazon Web Services and tools like Docker and Chef. I work with a
+            variety of technology stacks and languages, and I'm always on the lookout for
+            something new to learn.
+          </p>
+          <p>
+            I grew up in the small town of Orange, Texas, and lived in the general Southeast Texas
+            area for most of my life. I really got into video games at an early age, and it wasn't
+            long after that I knew I wanted to make games for a living. This led me down the path
+            of learning to code and while I didn't end up making games, I still found a career that
+            continues to be challenging and rewarding. I now reside in the Austin area.
+          </p>
+          <p>
+            Away from the desk, I enjoy spending time with my wife and our dogs. We love to travel
+            and really enjoy Walt Disney World and cruising.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <h2>My Work</h2>
+      <div class="row">
+        <div class="col-lg-8 col-md-7 col-xs-12">
+        </div>
+        <div class="col-lg-4 col-md-5 visible-md visible-lg">
+          <img src="/images/vectorstock_2471101.jpg" class="col-md-11 col-md-offset-1 section-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+        <form action="https://formspree.io/info@chrisallen.codes" method="POST">
+          <label>
+            <input type="text" name="name" placeholder="Name" class="contact-field">
+            <span>Name</span>
+          </label>
+          <label>
+            <input type="email" name="_replyto" placeholder="Email" class="contact-field">
+            <span>Email</span>
+          </label>
+          <label>
+            <textarea name="message" placeholder="Message" class="contact-field"></textarea>
+            <span>Message</span>
+          </label>
+          <input type="submit" value="Send">
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
 
 {{ partial "footer.html" . }}

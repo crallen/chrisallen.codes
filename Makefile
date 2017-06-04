@@ -28,7 +28,7 @@ FONTOUTDIR := $(STATICDIR)/fonts
 FONTOUT    := $(patsubst %, $(FONTOUTDIR)/$(FONTNAME).%, $(FONTEXTS)) \
               $(FONTOUTDIR)/FontAwesome.otf
 
-SASSARGS := --output-style compressed --include-path $(BOOTSTRAP) \
+SASSARGS := --output-style nested --include-path $(BOOTSTRAP) \
             --include-path $(FONTAWESOME)/scss --source-map true \
             --source-map-contents -o $(CSSOUTDIR) $(CSSDIR)
 
@@ -41,7 +41,7 @@ build:
 	$(HUGO)
 
 serve:
-	$(HUGO) server --renderToDisk
+	$(HUGO) server --renderToDisk --bind 0.0.0.0
 
 prod: clean
 	@ NODE_ENV=production $(MAKE) all

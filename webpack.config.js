@@ -6,6 +6,7 @@ var config = {
   devtool: 'source-map',
   entry: {
     vendor: './assets/js/vendor.js',
+    main: './assets/js/main.js',
     fonts: './assets/js/fonts.js'
   },
   output: {
