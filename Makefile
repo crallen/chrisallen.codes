@@ -32,7 +32,7 @@ SASSARGS := --output-style nested --include-path $(BOOTSTRAP) \
             --include-path $(FONTAWESOME)/scss --source-map true \
             --source-map-contents -o $(CSSOUTDIR) $(CSSDIR)
 
-all: build $(JSOUT) $(CSSOUT) $(FONTOUT)
+all: $(JSOUT) $(CSSOUT) $(FONTOUT) build
 
 clean:
 	rm -rf $(JSOUTDIR) $(CSSOUTDIR) $(FONTOUTDIR)
