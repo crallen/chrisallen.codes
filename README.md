@@ -7,5 +7,6 @@ This repository contains the source for [https://chrisallen.codes](https://chris
 The following directories and their contents are &copy; Christopher R. Allen or their respective owners:
 
 - `content/`
+- `static/images/`
 
 All other directories and files are MIT licensed unless stated otherwise.
