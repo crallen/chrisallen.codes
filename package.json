@@ -2,13 +2,13 @@
   "name": "chrisallen-codes-site",
   "version": "1.0.0",
   "description": "Personal site and blog",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Chris Allen",
-  "license": "MIT",
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "font-awesome": "^4.7.0",
