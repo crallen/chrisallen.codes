@@ -1,6 +1,7 @@
 +++
 title = "Portfolio"
-description = "A summary of projects I've worked on"
+description = "A brief history of the projects Chris Allen has worked on during his time as a software developer"
+keywords = ["Chris Allen", "Christopher R. Allen", "portfolio", "software developer", "software engineer"]
 slug = "portfolio"
 +++
 

@@ -1,10 +1,14 @@
+{{ $isHomePage := eq .Title .Site.Title }}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ if eq .Title "chrisallen.codes" }}{{ .Title }}{{ else }}{{ .Title }} - chrisallen.codes{{ end }}</title>
+    <title>{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
+    <meta name="keywords" content="{{ delimit .Keywords ", " }}">
+    <meta name="description" content="{{ .Description }}">
 
     <script src="/js/fonts.js"></script>
     <link rel="stylesheet" href="/css/main.css">
