@@ -4,6 +4,9 @@
   }
 
   aside.overlay {
+    width: 250px;
+    right: -250px;
+
     a:not(.fa) {
       font-size: 28px;
     }
