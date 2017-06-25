@@ -9,7 +9,12 @@ $darkerGray:     #262626;
 $darkGray:       #4d4d4d;
 $medGray:        #898989;
 
-$placeholderPseudos: '::-webkit-input-placeholder', '::-moz-placeholder', ':-ms-input-placeholder', ':-moz-placeholder',
+$placeholderPseudos: '::-webkit-input-placeholder',
+                     '::-moz-placeholder',
+                     ':-ms-input-placeholder',
+                     ':-moz-placeholder',
                      '::placeholder';
 
-$iphone5Width: 320px;
+$headerPadding:  60px;
+$headerHeight:   36px;
+$menuToggleSize: 36px;

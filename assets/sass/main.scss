@@ -2,6 +2,7 @@
 @import 'font-awesome';
 
 @import './variables';
+@import './animation';
 
 html, body {
   height: 100%;
@@ -13,6 +14,92 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 14px;
+  overflow-x: hidden;
+}
+
+aside.overlay {
+  background-color: #FFF;
+  height: 100%;
+  right: -300px;
+  top: 0;
+  position: absolute;
+  width: 300px;
+  transition: right .2s ease-in-out;
+  z-index: 1000;
+
+  a:not(.fa) {
+    font-size: 1.3em;
+    font-weight: 300;
+    color: $medGray;
+    transition: color .4s ease-in-out;
+    display: block;
+    text-decoration: none;
+
+    &:hover, &:active {
+      color: $nearBlack;
+      text-decoration: none;
+      outline: none;
+    }
+  }
+}
+
+nav {
+  visibility: hidden;
+  clear: right;
+  padding: 40px 0 0;
+
+  li {
+    list-style-type: none;
+    padding: 12px $headerPadding 12px 0;
+    text-align: right;
+    transform: translateX(-250px);
+    animation-duration: .4s;
+    animation-fill-mode: both;
+    animation-name: slideOutRight;
+  }
+
+  li.sub > ul {
+    display: none;
+    margin: 0;
+    padding: 6px 0;
+    width: 100%;
+
+    & > li {
+      padding: 6px 0;
+      font-size: 0.7em;
+    }
+  }
+
+  li.sub-open {
+    ul {
+      display: block;
+    }
+
+    & > a {
+      color: $nearBlack !important;
+    }
+  }
+}
+
+body.menu-open {
+  overflow-y: scroll;
+  position: fixed;
+  width: 100%;
+
+  aside.overlay {
+    right: 0;
+    box-shadow: -10px 0 42px rgba(15, 97, 119, 0.1);
+  }
+
+  nav {
+    visibility: visible;
+
+    li {
+      animation-duration: .4s;
+      animation-fill-mode: both;
+      animation-name: slideInRight;
+    }
+  }
 }
 
 main {
@@ -34,39 +121,53 @@ h1, h2, h3, h4, p, i, li, span, a {
 header {
   padding: 15px 0;
   color: #FFF;
-  line-height: 1.1em;
   background-color: $medTurquoise;
 
   a {
     color: #FFF;
     text-decoration: none;
+    line-height: $headerHeight !important;
 
     &:hover, &:active {
       color: #FFF;
     }
   }
 
-  .brand {
-    font-size: 1.2em;
-    margin-top: 5px;
-    margin-bottom: 25px;
-    text-align: center;
+  a.fa {
+    font-size: $menuToggleSize;
+
+    &:hover, &:active {
+      text-decoration: none;
+    }
   }
 
-  nav {
-    font-weight: 300;
-    font-size: 1.1em;
+  .brand {
+    font-size: 1.2em;
     text-align: center;
+    padding-left: $headerPadding;
+  }
 
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+  .nav-box {
+    padding-right: $headerPadding;
+  }
+}
 
-      &>li {
-        display: inline;
-        margin: 0.1em 0.4em 0;
-      }
+.nav-header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: $headerPadding;
+
+  a {
+    color: $darkGray;
+    text-decoration: none;
+    line-height: $headerHeight;
+  }
+
+  a.fa {
+    font-size: $menuToggleSize;
+
+    &:hover, &:active {
+      text-decoration: none;
     }
   }
 }
@@ -334,29 +435,6 @@ footer {
       color: $medGray;
       font-weight: 300;
       font-size: 0.7em;
-    }
-  }
-
-  nav {
-    &>ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-
-      &>li {
-        display: inline-block;
-        margin: 0 5px;
-      }
-    }
-
-    a {
-      color: #FFF;
-      font-weight: 300;
-      font-size: 0.9em;
-
-      &:hover, &:active {
-        color: #FFF;
-      }
     }
   }
 
