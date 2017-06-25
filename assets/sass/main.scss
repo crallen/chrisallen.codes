@@ -6,7 +6,6 @@
 
 html, body {
   height: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -15,6 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 14px;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 aside.overlay {
@@ -86,6 +87,7 @@ nav {
 
 body.menu-open {
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   position: fixed;
   width: 100%;
 
