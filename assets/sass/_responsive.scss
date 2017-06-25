@@ -30,7 +30,9 @@
     text-align: right;
 
     li {
-      padding-right: $headerPadding
+      a {
+        padding-right: $headerPadding;
+      }
     }
   }
 
