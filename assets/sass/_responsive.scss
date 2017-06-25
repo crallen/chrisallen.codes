@@ -3,17 +3,31 @@
     font-size: 18px;
   }
 
+  aside.overlay {
+    a:not(.fa) {
+      font-size: 28px;
+    }
+  }
+
   header {
     padding: 30px 0 20px;
 
     .brand {
-      text-align: left;
       margin-top: 0;
       margin-bottom: 0;
+      padding-left: $headerPadding;
     }
 
-    nav {
-      text-align: right;
+    .nav-box {
+      padding-right: $headerPadding;
+    }
+  }
+
+  nav {
+    text-align: right;
+
+    li {
+      padding-right: $headerPadding
     }
   }
 

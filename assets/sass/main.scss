@@ -28,7 +28,7 @@ aside.overlay {
   z-index: 1000;
 
   a:not(.fa) {
-    font-size: 1.3em;
+    font-size: 24px;
     font-weight: 300;
     color: $medGray;
     transition: color .4s ease-in-out;
@@ -50,7 +50,7 @@ nav {
 
   li {
     list-style-type: none;
-    padding: 12px $headerPadding 12px 0;
+    padding: 12px $headerPadding/2 12px 0;
     text-align: right;
     transform: translateX(-250px);
     animation-duration: .4s;
@@ -61,12 +61,15 @@ nav {
   li.sub > ul {
     display: none;
     margin: 0;
-    padding: 6px 0;
+    padding: 12px 0;
     width: 100%;
 
     & > li {
-      padding: 6px 0;
-      font-size: 0.7em;
+      padding: 12px 0;
+
+      a {
+        font-size: 18px !important;
+      }
     }
   }
 
@@ -143,19 +146,18 @@ header {
 
   .brand {
     font-size: 1.2em;
-    text-align: center;
-    padding-left: $headerPadding;
+    padding-left: $headerPadding / 2;
   }
 
   .nav-box {
-    padding-right: $headerPadding;
+    padding-right: $headerPadding / 2;
   }
 }
 
 .nav-header {
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-right: $headerPadding;
+  padding-right: $headerPadding / 2;
 
   a {
     color: $darkGray;

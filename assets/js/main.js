@@ -18,6 +18,7 @@ $('.menu-toggle').on('click', function(e) {
 
 $('.menu-close').on('click', function(e) {
   e.preventDefault();
+  $('.sub-open').removeClass('sub-open');
   $('body').removeClass('menu-open');
 });
 
