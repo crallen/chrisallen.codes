@@ -6,8 +6,9 @@ WEBPACK     := $(NODEBIN)/webpack
 BOOTSTRAP   := $(NODEMODULES)/bootstrap-sass/assets/stylesheets
 FONTAWESOME := $(NODEMODULES)/font-awesome
 
-ASSETSDIR  := ./assets
-STATICDIR  := ./static
+ASSETSDIR := ./assets
+STATICDIR := ./static
+PUBLICDIR := ./public
 
 JSDIR    := $(ASSETSDIR)/js
 JSIN     := $(shell find $(JSDIR) -name '*.js')
@@ -35,7 +36,7 @@ SASSARGS := --output-style nested --include-path $(BOOTSTRAP) \
 all: $(JSOUT) $(CSSOUT) $(FONTOUT) build
 
 clean:
-	rm -rf $(JSOUTDIR) $(CSSOUTDIR) $(FONTOUTDIR)
+	rm -rf $(JSOUTDIR) $(CSSOUTDIR) $(FONTOUTDIR) $(PUBLICDIR)
 
 build:
 	$(HUGO)
