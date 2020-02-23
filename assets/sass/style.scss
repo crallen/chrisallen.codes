@@ -1,10 +1,11 @@
 @import 'bootstrap';
-@import 'font-awesome';
 
+@import './fonts';
 @import './variables';
 @import './animation';
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -32,11 +33,12 @@ aside.overlay {
     font-size: 24px;
     font-weight: 300;
     color: $white;
-    transition: color .4s ease-in-out;
+    transition: color 0.4s ease-in-out;
     display: block;
     text-decoration: none;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       text-decoration: none;
       outline: none;
       background-color: $medTurquoise;
@@ -58,7 +60,7 @@ nav {
     padding: 0;
     text-align: right;
     transform: translateX(-250px);
-    animation-duration: .4s;
+    animation-duration: 0.4s;
     animation-fill-mode: both;
     animation-name: slideOutRight;
 
@@ -103,7 +105,7 @@ body.menu-open {
     visibility: visible;
 
     li {
-      animation-duration: .4s;
+      animation-duration: 0.4s;
       animation-fill-mode: both;
       animation-name: slideInRight;
     }
@@ -115,12 +117,28 @@ main {
 }
 
 .wf-loading {
-  h1, h2, h3, h4, p, i, li, span, a {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  i,
+  li,
+  span,
+  a {
     opacity: 0;
   }
 }
 
-h1, h2, h3, h4, p, i, li, span, a {
+h1,
+h2,
+h3,
+h4,
+p,
+i,
+li,
+span,
+a {
   transition-property: 'opacity';
   transition-duration: 150ms;
   transition-timing-function: ease-in;
@@ -128,23 +146,29 @@ h1, h2, h3, h4, p, i, li, span, a {
 
 header {
   padding: 15px 0;
-  color: #FFF;
+  color: #fff;
   background-color: $medTurquoise;
 
+  .container-fluid {
+    padding-right: 0;
+  }
+
   a {
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     line-height: $headerHeight !important;
 
-    &:hover, &:active {
-      color: #FFF;
+    &:hover,
+    &:active {
+      color: #fff;
     }
   }
 
   a.fa {
     font-size: $menuToggleSize;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       text-decoration: none;
     }
   }
@@ -152,10 +176,6 @@ header {
   .brand {
     font-size: 1.2em;
     padding-left: $headerPadding / 2;
-  }
-
-  .nav-box {
-    padding-right: $headerPadding / 2;
   }
 }
 
@@ -165,7 +185,7 @@ header {
   padding-right: $headerPadding / 2;
 
   a {
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     line-height: $headerHeight;
   }
@@ -173,25 +193,33 @@ header {
   a.fa {
     font-size: $menuToggleSize;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       text-decoration: none;
     }
   }
 }
 
-section, article {
+section,
+article {
   padding: 40px 0;
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     margin: 0;
     font-weight: 300;
   }
 
-  h1, h4 {
+  h1,
+  h4 {
     text-align: center;
   }
 
-  h2, h3, h4 {
+  h2,
+  h3,
+  h4 {
     color: $nearBlack;
   }
 
@@ -228,7 +256,8 @@ section, article {
     color: $medTurquoise;
   }
 
-  a:hover, a:active {
+  a:hover,
+  a:active {
     color: $lightTurquoise;
   }
 }
@@ -241,7 +270,7 @@ article {
   }
 
   ul {
-    &>li {
+    & > li {
       font-weight: 300;
       line-height: 1.75em;
     }
@@ -285,7 +314,7 @@ article {
   section {
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     padding-bottom: 200px;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     min-height: 440px;
     padding: 50px 0 40px;
@@ -294,7 +323,7 @@ article {
       font-size: 1.75em;
       text-align: center;
       margin-top: 0.5em;
-      color: #FFF;
+      color: #fff;
       line-height: 1.5em;
     }
   }
@@ -311,7 +340,7 @@ article {
 .expert-area {
   padding: 40px 0;
   text-align: center;
-  background-color: #FFF;
+  background-color: #fff;
   box-shadow: 5px 15px 42px 3px rgba(15, 97, 119, 0.1);
 
   & > .fa {
@@ -322,11 +351,11 @@ article {
 }
 
 .alt-section {
-  background-color: #1BBC9B;
-  color: #FFF;
+  background-color: #1bbc9b;
+  color: #fff;
 
   h2 {
-    color: #FFF;
+    color: #fff;
   }
 }
 
@@ -354,12 +383,13 @@ article {
     display: block;
     position: relative;
     margin-bottom: 10px;
-    border: 1px solid #E9E9E9;
+    border: 1px solid #e9e9e9;
 
-    input, textarea {
+    input,
+    textarea {
       border: 0 none;
       outline: none;
-      background-color: #FFF;
+      background-color: #fff;
       padding: 20px;
       width: 100%;
       transition: all 0.2s ease-in-out;
@@ -374,7 +404,8 @@ article {
         }
       }
 
-      &:focus, &.filled {
+      &:focus,
+      &.filled {
         padding-top: 30px;
         padding-bottom: 10px;
 
@@ -404,17 +435,17 @@ article {
       top: 0;
       left: 20px;
       right: 20px;
-      background-color: #FFF;
+      background-color: #fff;
       opacity: 0;
       transition: all 0.2s ease-in-out;
       padding: 10px 0 5px;
     }
   }
 
-  input[type=submit] {
+  input[type='submit'] {
     width: 100%;
     padding: 15px;
-    color: #FFF;
+    color: #fff;
     background-color: $lightGreen;
     border: 0 none;
     border-radius: 0;
@@ -446,7 +477,6 @@ footer {
   }
 
   .social {
-
     .social-icon-box {
       margin: 0;
       padding: 0;
@@ -456,13 +486,14 @@ footer {
         height: 50px;
         border-radius: 25px;
         background-color: $lightTurquoise;
-        color: #FFF;
+        color: #fff;
         display: block;
         text-align: center;
         text-decoration: none;
         margin: 0 auto;
 
-        &:hover, &:active {
+        &:hover,
+        &:active {
           text-decoration: none;
         }
       }

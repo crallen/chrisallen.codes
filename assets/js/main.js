@@ -1,8 +1,10 @@
+import '../sass/style.scss';
+
 var $ = require('jquery');
 
 $('.contact-field').on('input change', function() {
   var el = $(this);
-  if(el.val().length) {
+  if (el.val().length) {
     el.addClass('filled');
   } else {
     el.removeClass('filled');
@@ -30,5 +32,7 @@ $('nav li:not(.sub) a').on('click', function(e) {
 
 $('nav li.sub > a').on('click', function(e) {
   e.preventDefault();
-  $(e.target).parent().toggleClass('sub-open');
+  $(e.target)
+    .parent()
+    .toggleClass('sub-open');
 });

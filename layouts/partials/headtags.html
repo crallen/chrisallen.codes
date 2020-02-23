@@ -2,16 +2,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="og:title" content="{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="og:title" content="{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" />
     <meta name="keywords" content="{{ delimit .Keywords ", " }}">
-    <meta name="description" content="{{ .Description }}">
+    <meta name="description" content="{{ .Description }}" />
 
-    <script src="/js/fonts.js"></script>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script src="/assets/vendors.js" async></script>
+    <script src="/assets/main.js" defer></script>
   </head>
   <body>
     {{ partial "nav.html" . }}

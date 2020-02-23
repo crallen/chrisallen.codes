@@ -1,7 +1,5 @@
 node_modules
 .DS_Store
 public/
-static/css/
-static/js/
-static/fonts/
+resources/
 .vscode/
