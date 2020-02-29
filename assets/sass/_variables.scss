@@ -15,6 +15,22 @@ $highlight: #a57b43;
 $burntOrange: #7a431d;
 $brown: #563727;
 
+$frost: #dde2e3;
+$lead: #9aacb8;
+$burntAmber: #b37c57;
+$nightfall: #3c455c;
+$bark: #60412b;
+
+$base: #3c455c;
+$secondary: #5d72a8;
+$menu: #69534e;
+$action: #b58074;
+$actionHover: darken(
+  $color: $action,
+  $amount: 5
+);
+$light: #dde2e3;
+
 $placeholderPseudos: '::-webkit-input-placeholder', '::-moz-placeholder', ':-ms-input-placeholder', ':-moz-placeholder',
   '::placeholder';
 
